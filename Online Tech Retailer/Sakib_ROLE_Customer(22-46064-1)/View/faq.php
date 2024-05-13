@@ -1,0 +1,25 @@
+<?php
+
+include "../Model/db_config.php";
+include("top_section.php");
+// if(isset($_SESSION["question_msg"])){
+//     include("alert_box2.php");
+// }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Retailer</title>
+    <link rel="stylesheet" href="customer_question.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    
+</body>
+
+</html>

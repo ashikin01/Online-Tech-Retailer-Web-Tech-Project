@@ -1,0 +1,194 @@
+body {
+    background: whitesmoke;
+}
+
+h1 {
+    font-size: 22px;
+    margin-left: 105px;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+/* .container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    justify-content: center;
+    text-align: center; 
+    column-gap: -50px;
+} */
+
+.content-table {
+    position: absolute;
+    background: whitesmoke;
+    border-collapse: collapse;
+    margin: 65px 100px;
+    font-size: 15px;
+    min-width: 830px;
+    /* min-height: 70px; */
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+}
+
+.content-table thead tr {
+    background-color: teal;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    height: 60px;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15x;
+    /* min-height: 300px;  */
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    height: 60px;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid teal;
+}
+
+.quantity {
+    border-radius: 7px;
+    text-align: center;
+    border: 1px solid rgb(102, 178, 178);
+    width: 55px;
+    height: 25px;
+}
+
+.btn-remove {
+    /* margin-top: 1rem; */
+    /* display: inline-block; 
+    padding: 0.5rem 1rem; */
+    /* margin-top: -10px; */
+    background: whitesmoke;
+    width: 35px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(218, 3, 3);
+    font-weight: bold;
+    border: 1px solid rgb(102, 178, 178);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(55 55 55 / 35%);
+}
+
+.btn-remove:hover {
+    /* opacity: 0.8; */
+    background: rgb(218, 3, 3);
+    color: whitesmoke
+}
+
+.price-details {
+    background: whitesmoke;
+    position: absolute;
+    width: 280px;
+    height: 355x;
+    /* text-align: center; */
+    /* margin-top: -160px; */
+    color: #121212;
+    font-size: 16px;
+    font-weight: 200px;
+    border-radius: 7px 7px 0 0;
+    /* border: 1px solid rgb(102,178,178); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+    margin-top: 65px;
+    /* margin-left: -40px; */
+    margin-left: 975px;
+}
+
+.price-details table {
+    border-collapse: collapse;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+    min-width: 280px;
+}
+
+.price-details tr {
+    background-color: teal;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    height: 60px;
+    /* min-width: 300px; */
+}
+
+.price-details:last-of-type {
+    border-bottom: 2px solid teal;
+}
+
+.total-price {
+    /* display: flex; */
+    /* gap: 120px; */
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 27px;
+    /* text-align: center; */
+}
+
+.price-value {
+    font-size: 18px;
+    margin-top: -26.5px;
+    margin-left: 195px;
+}
+
+.cus-info {
+    width: 100%;
+    height: 40px;
+    margin: 30px;
+    margin-top: 15px;
+}
+
+.cus-info input {
+    width: 80%;
+    height: 25px;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+    border: 1px solid rgb(102, 178, 178);
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 20px 45px 20px 10px;
+}
+
+.btn-container {
+    margin-top: 55px;
+    text-align: center;
+    /* position: absolute; */
+}
+
+.btn-checkout {
+    background: whitesmoke;
+    width: 180px;
+    height: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    color: teal;
+    font-weight: bold;
+    border: 1px solid rgb(102, 178, 178);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(55 55 55 / 35%);
+}
+
+.btn-checkout:hover {
+    background: rgb(102, 178, 178);
+    color: whitesmoke
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+}
+
+.img{
+    max-width: 100%;
+    max-height: 100%;
+}

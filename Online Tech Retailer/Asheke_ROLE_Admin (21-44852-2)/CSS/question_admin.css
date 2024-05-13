@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.question-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.question-table th, .question-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.question-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

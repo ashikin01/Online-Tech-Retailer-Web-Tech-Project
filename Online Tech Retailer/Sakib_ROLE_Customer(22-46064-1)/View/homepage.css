@@ -1,0 +1,315 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    /* list-style: none; */
+    scroll-behavior: smooth;
+}
+
+body {
+    background: whitesmoke;
+    /* color: #121212; */
+}
+
+/* section {
+    padding: 100px 8%;
+} */
+
+h1 {
+    font-size: 22px;
+    margin-left: 70px;
+    margin-top: 115px;
+    font-weight: bold;
+}
+
+.filter-condition {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 1110px;
+}
+
+.filter-condition span {
+    display: flex;
+    font-size: 17px;
+    margin-left: -10px;
+}
+
+.filter-condition select {
+    border: 0.5px solid rgb(102, 178, 178);
+    border-radius: 8px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.filter-condition option {
+    font-size: 15px;
+}
+
+.heading {
+    text-align: center;
+    padding: -3rem 0;
+    padding-bottom: 2rem;
+    font-size: 18px;
+    /* color: #666; */
+    margin-top: -60px;
+    /* background: rgb(71, 124, 124); */
+    background: rgb(65, 64, 64);
+    color: #fff;
+    /* display: block; */
+    height: 25px;
+    width: 115px;
+    border-radius: 10px;
+    font-weight: 80;
+}
+
+.box-container {
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
+
+    /* max-width: 1500px; */
+    width: 100%;
+    /* margin: 30px auto; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* margin: auto; */
+    /* column-gap: 1px;  */
+    /* row-gap: 1rem; */
+    /* padding-top: 2rem; */
+    margin-top: 20px;
+}
+
+.box {
+    /* padding: 3rem 2rem;
+    background: #fff;
+    outline: 1rem solid rgb(0 0 0 .1);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); */
+    /* height: 380px; */
+    text-align: center;
+    max-width: 250px;
+    /* flex: 1 1 210px; */
+    margin: 30px 15px 40px;
+
+    /* margin: 30px; */
+    padding: 0px 20px 10px 20px;
+    background: hsl(0, 0%, 100%);
+    /* box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+    border-radius: 10px;
+    /* position: relative;
+    outline: 1rem solid rgb(0 0 0 .1);
+    outline-offset: -1rem; */
+    /* transition: all .35s ease; */
+    height: 375px;
+    /* overflow: hidden; */
+
+}
+
+.box img {
+    width: auto;
+    height: auto;
+    /* background: lightblue;
+    background: radial-gradient(white 30%, lightblue 70%); */
+    margin-top: -15px;
+}
+
+.box2 {
+    text-align: center;
+    max-width: 250px;
+    margin: 30px 15px 40px;
+    padding: 0px 20px 10px 20px;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+    border-radius: 10px;
+    height: 325px;
+}
+
+.box2 h3 {
+    font-size: 15px;
+    color: #121212;
+    /* letter-spacing: 1px;
+    margin-bottom: 20px;*/
+    margin-top: -15px;
+    font-weight: normal;
+
+}
+
+.box2 img {
+    width: auto;
+    height: auto;
+    /* background: lightblue;
+    background: radial-gradient(white 30%, lightblue 70%); */
+    margin-top: -15px;
+}
+
+.img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.box h3 {
+    font-size: 15px;
+    color: #121212;
+    /* letter-spacing: 1px;
+    margin-bottom: 20px;*/
+    margin-top: -15px;
+    font-weight: normal;
+
+}
+
+/*.box h2{
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+} */
+/* .box.cart a{
+    background: #e1e4e3;
+    color: #121212;
+    font-size: 15px;
+    border: 1px solid rgb(6, 96, 151);
+    border-radius: 10px;
+}
+.box.cart i:hover{
+    opacity: 0.8;
+}
+.icon.bx.bx-cart{
+    font-size: 35px;
+} */
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.heading2 {
+    text-align: center;
+    padding: -3rem 0;
+    padding-bottom: 2rem;
+    font-size: 18px;
+    margin-top: -140px;
+    /* background: rgb(71, 124, 124); */
+    background: rgb(65, 64, 64);
+    color: #fff;
+    height: 25px;
+    width: 115px;
+    border-radius: 10px;
+    font-weight: 80;
+}
+
+.heading3 {
+    text-align: center;
+    padding: -3rem 0;
+    padding-bottom: 2rem;
+    font-size: 18px;
+    margin-top: -140px;
+    /* background: rgb(71, 124, 124); */
+    background: rgb(65, 64, 64);
+    color: #fff;
+    height: 25px;
+    width: 135px;
+    border-radius: 10px;
+    font-weight: 80;
+}
+
+.price {
+    /* position: absolute; */
+    font-size: 15px;
+    color: #121212;
+    padding: 2.2rem 0;
+    /* margin-top: 25px; */
+    font-weight: normal;
+}
+
+.old-price {
+    /* position: absolute; */
+    font-size: 15px;
+    color: #666;
+    /* padding: .5rem 0; */
+    margin-top: -30px;
+    /* padding: -2rem 0; */
+    /* margin-left: 75px; */
+    font-weight: normal;
+}
+
+.old-price del {
+    text-decoration: line-through;
+}
+
+.old-price2 {
+    /* position: absolute; */
+    font-size: 15px;
+    color: #666;
+    /* padding: .5rem 0; */
+    margin-top: -15px;
+    /* padding: -2rem 0; */
+    /* margin-left: 75px; */
+    font-weight: normal;
+}
+
+.old-price2 del {
+    text-decoration: line-through;
+}
+
+.new-arrival {
+    font-size: 15px;
+    color: black;
+    margin-top: -30px;
+    font-weight: normal;
+}
+
+.new-arrival2 {
+    font-size: 15px;
+    color: black;
+    margin-top: -15px;
+    font-weight: normal;
+}
+
+
+.stock {
+    /* position: relative; */
+    font-size: 17px;
+    color: #121212;
+    margin-top: 25px;
+    font-weight: normal;
+}
+
+.stock2 {
+    font-size: 17px;
+    color: #121212;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.btn-cart {
+    /* margin-top: 35px; */
+    /* position: absolute; */
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    /* margin-top: -10px; */
+    background: whitesmoke;
+    /* width: 120px;
+    height: 50px; */
+    /* margin: 30px; */
+    /* margin-top: 10px; */
+    cursor: pointer;
+    font-size: 15px;
+    color: teal;
+    font-weight: bold;
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(55 55 55 / 35%);
+    margin-top: 20px;
+}
+
+.bx-bx-cart-add {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-cart:hover {
+    background: rgb(102, 178, 178);
+    color: whitesmoke;
+}

@@ -1,0 +1,236 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: whitesmoke;
+    color: #121212;
+}
+
+/* .container{
+    position: fixed;
+    
+    width: 100%;
+    
+    
+    
+    transition: 0.6s;
+    padding: 40px 100px;
+} */
+.header-container nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    padding-bottom: 15px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* box-shadow: 0px 2px 18px 0 rgb(129 162 182 / 20%); */
+    box-shadow: 0px 2px 18px 0 rgb(55 55 55 / 20%);
+    background: #e1e4e3;
+    /* background-color: rgb(91, 136, 136); */
+    margin-top: auto;
+    /* z-index: 1020; */
+    /* border-radius: 30px 30px 0 0; */
+}
+
+.retailer {
+    /* font-style: oblique; */
+    font-size: 22px;
+    color: #121212;
+    /* color: rgb(235, 243, 247); */
+    font-weight: 600;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.search {
+    position: relative;
+    display: inline-block;
+}
+
+.header-container nav input {
+    margin-top: 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 15px;
+    /* background-size:1em; */
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-left: 90px;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+    /* border: 1px solid rgb(76, 134, 134); */
+    border: 1px solid rgb(102, 178, 178);
+    padding: 20px 45px 20px 10px;
+}
+
+/* .header-container nav input[type="search"]::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+} */
+/* input[type="search"]::placeholder{
+    font-weight: 500;
+    font-size:25px;
+    color:#807878;
+    padding-left: 30px;
+    
+} */
+.search button {
+    background: transparent;
+}
+
+.search button.search-button {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    width: 50px;
+    height: 40px;
+    border: none;
+    cursor: none;
+}
+
+.search-button img {
+    position: relative;
+    width: 1.5em;
+    top: -10px;
+    right: 2px;
+}
+
+.search-button img:hover {
+    opacity: 0.3;
+    color: rgb(102, 178, 178);
+}
+
+.icon {
+    display: flex;
+    /* margin-right:-40px; */
+    margin-right: 35px;
+    gap: 10px;
+}
+
+.icon a {
+    text-decoration: none;
+}
+
+.icon i {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    width: 50px;
+    height: 100%;
+    color: black;
+}
+
+.icon i:hover {
+    opacity: 0.9;
+    color: rgb(102, 178, 178);
+}
+
+.fa-solid.fa-cart-shopping {
+    font-size: 25px;
+    margin-left: 3px;
+}
+
+.cart-value {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: -60px;
+    margin-left: 43px;
+    /* background: rgb(241, 168, 190); */
+    background: teal;
+    height: 22px;
+    width: 20px;
+    border-radius: 7px;
+}
+
+.icon .fa-solid.fa-user {
+    font-size: 25px;
+    margin-right: 3px;
+}
+
+/* .home-product {
+    background-color: rgb(117, 172, 172);
+    width: 100%;
+    height: auto;
+}
+
+.home-product div {
+    padding: 10px 0 10px 0px;
+}
+
+.home-product a {
+    font-weight: 50px;
+    font-size: 16px;
+    color: rgb(12, 34, 44);
+    text-decoration: none;
+    margin: 5px 0 10px 10px;
+}
+
+.home-product div:first-child {
+    margin-left: 80px;
+} */
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px 10px 0px;
+    margin-right: -90px;
+    gap: 25px;
+
+}
+
+.menu a {
+    font-size: 15px;
+    color: #121212;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    opacity: .9;
+    color: rgb(102, 178, 178);
+    /* background: rgb(102, 178, 178);
+    color: whitesmoke;
+    border-radius: 7px;
+    height: fit-content; */
+}
+
+/* .active{
+    color: #fff;
+    background: teal;
+} */
+
+/* @media(max-width: 1610px){
+    .header-container{
+        padding: 15px 7%;
+    }
+} */
+
+nav a:is(:link, :active, :visited).active{
+    opacity: .9;
+    color: teal;
+    /* background: rgb(102, 178, 178);
+    color: whitesmoke;
+    border-radius: 7px;
+    height: fit-content; */
+    font-weight: bold;
+}
+
+nav a i:is(:link, :active, :visited).active{
+    opacity: .9;
+    color: teal;
+    /* background: rgb(102, 178, 178);
+    color: whitesmoke;
+    border-radius: 7px;
+    height: fit-content; */
+    font-weight: bold;
+}

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    text-align: left;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+td:first-child, td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+    text-align: center;
+}
+
+td:last-child, td:nth-last-child(2) {
+    text-align: center;
+}
+
+
+.product_image {
+    max-width: 10px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }

@@ -1,0 +1,33 @@
+
+h1 {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Removing default margin */
+    padding: 10px 20px; /* Adding some padding */
+    border-bottom: 1px solid #ddd; /* Adding a bottom border */
+  }
+  
+  .welcome-message {
+    text-align: center; /* Center align the welcome message */
+  }
+  
+  .logout-button {
+    text-align: right; /* Right align the logout button */
+    float: right; /* Float the button to the right edge */
+  }
+  
+  button {
+    background-color: #eee; /* Light gray background */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ddd; /* Slightly darker on hover */
+  }
+  
+  a {
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove underline decoration */
+  }
+  

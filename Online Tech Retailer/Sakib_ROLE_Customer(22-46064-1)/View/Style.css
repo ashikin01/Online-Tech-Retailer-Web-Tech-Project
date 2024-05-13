@@ -1,0 +1,427 @@
+/* Login */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: whitesmoke;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    /* min-height: 110vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 5px 10px;
+}
+
+.wrapper form {
+    margin-top: 170px;
+    padding: 2rem;
+    width: 400px;
+    height: 420px;
+    /* margin-top: -20px; */
+    border-radius: 10px;
+    /* box-shadow: 30px; */
+    /* border: 1px solid rgb(102, 178, 178); */
+    border: none;
+    /* background-color: rgb(191, 212, 216); */
+    /* box-shadow: 5px 30px 56px rgb(55 55 55 / 10%); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+
+}
+
+.wrapper h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: black;
+    font-weight: 300;
+}
+
+.input-box {
+    width: 100%;
+    height: 50px;
+    margin: 30px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.input-box input {
+    width: 80%;
+    height: 80%;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 20px 45px 20px 10px;
+}
+
+.forgot {
+    font-size: 15px;
+    margin-left: 180px;
+    /* margin: 35px 50px -20px; */
+}
+
+.forgot a {
+    /* color: rgb(95, 121, 138); */
+    /* color: rgb(6, 96, 151); */
+    color: teal;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    opacity: 0.4;
+}
+
+.btn {
+    width: 80%;
+    height: 40px;
+    margin: 30px;
+    margin-top: 10px;
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    /* color: rgb(6, 96, 151); */
+    color: teal;
+    font-weight: bold;
+    /* box-shadow: 0 0 10px rgb(6, 96, 151); */
+    box-shadow: 0 0 10px rgb(55 55 55 / 35%);
+}
+
+.btn:hover {
+    /* opacity: 0.8; */
+    background: rgb(102, 178, 178);
+    color: whitesmoke;
+}
+
+.register-link {
+    font-size: 15px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.register-link a {
+    /* color: rgb(6, 96, 151); */
+    color: teal;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    opacity: 0.4;
+}
+
+.login-role-link{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-role-link a{
+    /* color: rgb(6, 96, 151); */
+    color: teal;
+    text-decoration: none;
+    /* margin-top: 10px; */
+}
+
+.login-role-link a:hover {
+    opacity: 0.4;
+}
+
+/* Registration */
+.wrapper-reg {
+    min-height: 125vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px 55px;
+}
+
+.wrapper-reg form {
+    padding: 5rem;
+    width: 700px;
+    height: 505px;
+    /* margin-top: -80px; */
+    color: black;
+    border-radius: 12px;
+    /* border: 1px solid rgb(6, 96, 151); */
+    /* border: 1px solid rgb(102, 178, 178); */
+    border: none;
+    /* box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+    /* background-color: rgb(191, 212, 216); */
+}
+
+.wrapper-reg h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #121212;
+    font-weight: 300;
+}
+
+.input-box-reg {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.input-field {
+    /* position: relative; */
+    width: 48%;
+    font-size: 16px;
+    /* margin-top: 30px; */
+
+}
+
+.input-box-reg input {
+    width: 100%;
+    height: 40%;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+    /* border: 1px solid rgb(6, 96, 151); */
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 20px 45px 20px 10px;
+}
+
+.btn-reg {
+    width: 93%;
+    height: 40px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    border: 0.5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    /* color: rgb(6, 96, 151); */
+    color: teal;
+    font-weight: 350;
+    /* box-shadow: 0 0 10px rgb(6, 96, 151); */
+    box-shadow: 0 0 10px rgba(253, 235, 235, 0.35);
+
+}
+
+.btn-reg:hover {
+    /* opacity: 0.8; */
+    background: rgb(102, 178, 178);
+    color: whitesmoke;
+}
+
+/* Forgot Password */
+.wrapper-forgot {
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px 55px;
+    /* padding: 5px 10px; */
+}
+
+.wrapper-forgot form {
+    padding: 2rem;
+    width: 400px;
+    height: 450px;
+    /* margin-top: 50px; */
+    color: black;
+    border-radius: 10px;
+    /* border: 1px solid rgb(102, 178, 178); */
+    border: none;
+    /* box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+    /* background-color: rgb(191, 212, 216); */
+}
+
+.wrapper-forgot h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 300;
+}
+
+.input-box-forgot {
+    width: 100%;
+    height: 50px;
+    margin: 30px;
+    font-size: 16px;
+}
+
+.input-box-forgot input {
+    width: 84%;
+    height: 80%;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 20px 45px 20px 10px;
+}
+
+.btn-forgot {
+    width: 84.5%;
+    height: 40px;
+    margin: 28px;
+    border: none;
+    outline: none;
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: teal;
+    font-weight: 350;
+    /* box-shadow: 0 0 10px rgb(6, 96, 151); */
+    box-shadow: 0 0 10px rgb(55 55 55 / 35%);
+}
+
+.btn-forgot:hover {
+    /* opacity: 0.8; */
+    background: rgb(102, 178, 178);
+    color: whitesmoke;
+}
+
+/* Profile Update */
+.wrapper-details {
+    /* min-height: 100vh;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px 55px;
+}
+
+.wrapper-details form {
+    /* padding: 2rem; */
+    width: 500px;
+    height: 490px;
+    /* margin-top: 60px */
+    color: black;
+    border-radius: 10px;
+    /* border: 1px solid rgb(102, 178, 178); */
+    border: none;
+    /* box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+    /* background-color: rgb(191, 212, 216); */
+    margin-top: -80px;
+}
+
+.wrapper-details h1 {
+    font-size: 22px;
+    /* text-align: center; */
+    margin-top: 15px;
+    color: #121212;
+    margin-left: 160px;
+    font-weight: 300;
+}
+
+/* Change Password */
+.wrapper-pass {
+    /* min-height: 100vh;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px 55px;
+    /* padding: 5px 10px; */
+}
+
+.wrapper-pass form {
+    /* padding: 2rem; */
+    width: 400px;
+    height: 410px;
+    margin-top: -160px;
+    color: black;
+    border-radius: 10px;
+    /* border: 1px solid rgb(102, 178, 178); */
+    border: none;
+    /* box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+    /* background-color: rgb(191, 212, 216); */
+}
+
+.wrapper-pass h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+    color: #121212;
+    font-weight: 300;
+}
+
+/* Profile */
+.wrapper-profile {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* column-gap: -5px; */
+
+}
+
+/* .wrapper-profile form{
+    column-gap: 30px;
+} */
+.btn-profile {
+    width: 80%;
+    height: 40px;
+    margin: 30px;
+    margin-top: 15px;
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: teal;
+    font-weight: bold;
+    /* box-shadow: 0 0 10px rgb(6, 96, 151); */
+    box-shadow: 0 0 10px rgb(55 55 55 / 35%);
+}
+
+.btn-profile:hover {
+    /* opacity: 0.8; */
+    background: rgb(102, 178, 178);
+    color: whitesmoke;
+}
+
+/* Error Message */
+.error-msg {
+    font-size: 12px;
+    color: rgb(218, 3, 3);
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 32px;
+}
+
+.error-msg-reg{
+    font-size: 12px;
+    color: rgb(218, 3, 3);
+    position: absolute;
+    margin-top: -23px;
+    margin-left: 3px;
+}
+
+.error-msg-reg2{
+    font-size: 12px;
+    color: rgb(218, 3, 3);
+    position: absolute;
+    margin-top: -23px;
+    margin-left: 320px;
+}
+

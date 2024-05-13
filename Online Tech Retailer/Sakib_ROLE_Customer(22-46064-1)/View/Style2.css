@@ -1,0 +1,124 @@
+ /* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+} */
+/* body{
+    background: #e1e4e3;
+    color: #121212;
+} */
+/* Error Message */
+/* .error-msg {
+    font-size: 12px;
+    color: red;
+    text-align: center;
+
+} */
+
+h1 {
+    font-size: 22px;
+    margin-left: 200px;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+/* Logout */
+
+.profile-header {
+    /* min-height: 100vh;  */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* padding: 15px 25px 55px; */
+    padding: 5px 10px;
+}
+
+.profile-header form {
+    padding: 5px 10px;
+    /* padding: 15px 25px 55px; */
+    width: 950px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: -1px;
+    color: black;
+    border-radius: 10px;
+    /* border: 1px solid rgb(102, 178, 178); */
+    border: none;
+    /* background-color: rgb(191, 212, 216); */
+    /* box-shadow: 5px 30px 56px rgb(55 55 55 / 12%); */
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+}
+
+/* .profile-header h1{
+    font-size: 18px;
+    font-weight: 50px;
+    text-align: left;
+    margin-top: 7px;
+    margin-left: 15px;
+} */
+.container-header {
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px o 10px 0;
+    gap: 7px;
+    color: #121212;
+    margin-bottom: -80px;
+    /* margin-top: -100px; */
+}
+
+.container-header {
+    display: flex;
+    /* justify-content: space-around; */
+    padding: 7px 0px 10px 0px;
+    margin-left: 20px;
+    column-gap: 20px;
+}
+
+.container-header a {
+    font-size: 15px;
+    color: #121212;
+    text-decoration: none;
+}
+
+/* .container-header a.active, */
+.container-header a:hover {
+    opacity: 0.9;
+    color: rgb(102, 178, 178);
+}
+
+.wrapper-btn-logout {
+    margin-top: -116px;
+    margin-left: 837px;
+}
+
+.btn-logout {
+    /* width: 13%; */
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border: .5px solid rgb(102, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: teal;
+    font-weight: bold;
+    /* box-shadow: 0 0 10px rgb(6, 96, 151); */
+    box-shadow: 0 0 10px rgb(55 55 55 / 35%);
+}
+
+.btn-logout:hover {
+    /* opacity: 0.8; */
+    background: rgb(102, 178, 178);
+    color: whitesmoke;
+}
+
+.container-header a:is(:link, :active, :visited).active{
+    opacity: .9;
+    color: teal;
+    font-weight: bold;
+}

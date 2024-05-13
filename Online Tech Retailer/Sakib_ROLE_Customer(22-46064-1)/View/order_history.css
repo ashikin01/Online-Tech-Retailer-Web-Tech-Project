@@ -1,0 +1,44 @@
+body {
+    background: whitesmoke;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.content-table {
+    background: whitesmoke;
+    border-collapse: collapse;
+    margin: 15px 100px;
+    font-size: 15px;
+    min-width: 950px;
+    /* min-height: 70px; */
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(55 55 55 / 15%);
+}
+
+.content-table thead tr {
+    background-color: teal;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    height: 60px;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15x;
+    /* min-height: 300px;  */
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    height: 60px;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid teal;
+}

@@ -1,0 +1,20 @@
+#buttons-container {
+    position: fixed;
+    top: 10px; 
+    right: 10px; 
+   
+  }
+  
+  #buttons-container form {
+    display: inline-block; /* Display buttons side-by-side */
+    margin: 0 5px; /* spacing between buttons */
+  }
+
+  button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Add some padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
