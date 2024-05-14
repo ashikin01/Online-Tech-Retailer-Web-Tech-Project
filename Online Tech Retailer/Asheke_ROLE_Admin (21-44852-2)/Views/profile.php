@@ -43,6 +43,7 @@ $user_data_array=$sql->get_result()->fetch_all(MYSQLI_ASSOC);
         <td><b>Username</td>       
         <td><b>Email</td>
         <td><b>Phone Number</td>
+        <td colspan="2"><b>Action</td>
 
     </tr>
     <?php foreach($user_data_array as $row){ ?>
@@ -52,7 +53,7 @@ $user_data_array=$sql->get_result()->fetch_all(MYSQLI_ASSOC);
         <td><?php echo $row['username'] ?></td>
         <td><?php echo $row['email'] ?></td>     
         <td><?php echo $row['phone_number'] ?></td>     
-        <td><button><a href="edit_profile.php?edit_id=<?php echo $row['id'] ?>">Edit</a></button></td>            
+        <td><button ><a href="edit_profile.php?edit_id=<?php echo $row['id'] ?>">Edit</a></button></td>            
         <td><button><a href="change_password.php?edit_id=<?php echo $row['id'] ?>">Change Password</a></button></td>            
     </tr>
    

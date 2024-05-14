@@ -5,7 +5,7 @@
   if(isset($_GET['delete_employee_task_id'])){
     $delete_employee_task_id=$_GET['delete_employee_task_id'];
     $manage_employee_task_user_id=$_GET['manage_employee_task_user_id']; 
-    $sql=$conn->prepare("delete from delivery_man_tasks where tid=?");
+    $sql=$conn->prepare("delete from tasks where tid=?");
     $sql->bind_param("i",$delete_employee_task_id);
     $sql->execute();
 

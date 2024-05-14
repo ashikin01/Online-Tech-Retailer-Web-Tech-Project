@@ -21,7 +21,7 @@ $user_data_array=$sql->get_result()->fetch_all(MYSQLI_ASSOC);
 <table>
 
       
-    <legend>Manage Users</legend>
+    <legend>Manage Customers</legend>
     <?php
     if(isset($_SESSION['db_error_message'])){
         echo $_SESSION['db_error_message'];

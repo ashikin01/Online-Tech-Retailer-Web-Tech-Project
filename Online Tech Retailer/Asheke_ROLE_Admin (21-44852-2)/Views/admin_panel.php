@@ -35,7 +35,7 @@ else{
                 </tr>
 
                 <tr>                            
-                    <td><a href="manage_user.php"><input type="button" name="manage_uses" value="Manage Users"></a></td>
+                    <td><a href="manage_user.php"><input type="button" name="manage_uses" value="Manage Customers"></a></td>
                 </tr>
 
                
@@ -61,6 +61,11 @@ else{
 
                 <tr>                            
                     <td><a href="data_analytics.php"><input type="button" name="data_analytics" value="Data Analytics"></a></td>
+                </tr>
+
+             
+                <tr>                            
+                    <td><a href="company_owners.php"><input type="button" name="company_owners" value="Company Owners"></a></td>
                 </tr>
 
              

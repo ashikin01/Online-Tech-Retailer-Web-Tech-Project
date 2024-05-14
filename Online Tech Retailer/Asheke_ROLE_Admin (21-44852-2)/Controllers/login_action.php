@@ -69,6 +69,7 @@
            
             
             if(mysqli_num_rows($data)>0){
+                
                 $_SESSION['username']=$username;
                 header("location: ../Views/admin_panel.php");
                

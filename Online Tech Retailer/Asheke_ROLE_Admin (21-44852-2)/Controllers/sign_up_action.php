@@ -214,8 +214,8 @@
 
         if($has_error==false){
 
-            $sql=$conn->prepare("insert into admin_users values(?,?,?,?,?,?)");
-            $sql->bind_param("ssssss",$name,$username,$password,$email,$phone_number);
+            $sql=$conn->prepare("insert into admin_users values(null,?,?,?,?,?)");
+            $sql->bind_param("sssss",$name,$username,$password,$email,$phone_number);
             $sql->execute();
             header("location: ../Views/login.php");
            

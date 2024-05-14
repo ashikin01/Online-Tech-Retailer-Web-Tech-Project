@@ -23,7 +23,7 @@ session_start();
                 
                 <fieldset>
                 <table>
-                    <legend>Add Delivery Man</legend>
+                    <legend>Add Employees</legend>
                     
                     <tr>
                         <th><label for="name">Name</label></th>
@@ -44,7 +44,7 @@ session_start();
                     <tr>
                         <th><label for="employee_id">Deliver Man PIN</label></th>
                         <td>:</td>
-                        <td><input type="number" id="employee_id" name="employee_id" placeholder="Delievery Man ID" value="">
+                        <td><input type="number" id="employee_id" name="employee_id" placeholder="Employee ID" value="">
                         <span class="error" id="err_employee_id">
                             <?php
                             if (isset($_SESSION['err_employee_id'])) {

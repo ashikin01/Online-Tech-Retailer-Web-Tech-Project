@@ -88,6 +88,8 @@ function sanitize($data){
 ?>
 
 </body>
+
+<?php  include("footer.php"); ?>
 </html>
 
 
