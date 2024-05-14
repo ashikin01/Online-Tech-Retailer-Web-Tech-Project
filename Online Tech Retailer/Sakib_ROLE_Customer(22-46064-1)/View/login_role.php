@@ -106,17 +106,21 @@ include("top_section.php");
     <h1>Choose login role ?</h1>
 
     <div class="btn-container">
-      <form action="" method="post" novalidate>
-        <button class="btn-admin">Admin Login</button>
+      <!-- <form action="" method="post" novalidate>
+        <button >Admin Login</button>
       </form>
 
       <form action="" method="post" novalidate>
-        <button class="btn-employee">Employee Login</button>
-      </form>
+        <button >Employee Login</button>
+      </form> -->
 
-      <form action="" method="post" novalidate>
-        <button class="btn-delivery">Delivery Man Login</button>
-      </form>
+      <a href="../../Asheke_ROLE_Admin (21-44852-2)/Views/login.php"><input class="btn-admin" type="button" name="company_owners" value="Admin Login"></a>
+      <a href="../../Yeameen_ROLE_Employee (21-44886-2)/Views/Login_Layout.php"><input class="btn-employee" type="button" name="company_owners" value="Employee Login"></a>
+      <a href="../../Pranto_ROLE_Delivery_Man(21-45026-2)/views/login.php"><input class="btn-delivery" type="button" name="company_owners" value="Delivery Man Login"></a>
+
+      <!-- <form action="" method="post" novalidate>
+        <button >Delivery Man Login</button>
+      </form> -->
     </div>
   </div>
 

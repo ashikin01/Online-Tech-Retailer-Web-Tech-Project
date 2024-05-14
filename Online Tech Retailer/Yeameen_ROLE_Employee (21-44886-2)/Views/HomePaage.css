@@ -1,25 +1,45 @@
-/* Add this CSS to your HomePaage.css file */
-
 body {
     font-family: Calibri, sans-serif;
-    background-color: #f4f4f4;
+    background-color: floralwhite;
     margin: 0;
     padding: 0;
 }
 
 h1 {
     text-align: center;
+    color: black;
+    margin-top: 20px;
+}
+
+.profile-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    transition: transform 0.3s;
+}
+
+.profile-logo:hover {
+    transform: scale(1.1);
 }
 
 .button-container {
     text-align: center;
-    margin-top: 20px; /* Add some space from the top */
+    margin-top: 20px;
+}
+
+.button-container a {
+    text-decoration: none;
 }
 
 .button-container button {
-    display: inline-block;
     padding: 10px 20px;
-    margin: 0 20px;
+    margin: 0 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -30,38 +50,4 @@ h1 {
 
 .button-container button:hover {
     background-color: #0056b3;
-}
-
-input[type="submit"] {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-.profile-container {
-    position: fixed;
-    top: 20px; /* Adjusted for better visibility */
-    right: 20px; /* Adjusted for better visibility */
-}
-
-.profile-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Makes the logo round */
-    border: 2px solid #007bff; /* Adds a border */
-    transition: transform 0.3s; /* Add animation on hover */
-}
-
-.profile-logo:hover {
-    transform: scale(1.1); /* Increases size on hover */
 }

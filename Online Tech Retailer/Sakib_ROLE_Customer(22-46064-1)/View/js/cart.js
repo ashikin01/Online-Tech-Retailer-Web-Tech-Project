@@ -13,6 +13,17 @@ function subTotal() {
     }
 }
 
+
+        // function loadDoc() {
+        //     const xhttp = new XMLHttpRequest();
+        //     xhttp.onload = function() {
+        //         document.getElementById("container").innerHTML =
+        //             this.responseText;
+        //     }
+        //     xhttp.open("POST", "../Controller/cart_action.php");
+        //     xhttp.send();
+        // }
+
 subTotal();
 
 

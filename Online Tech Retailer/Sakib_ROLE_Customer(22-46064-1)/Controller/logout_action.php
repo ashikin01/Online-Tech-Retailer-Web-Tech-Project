@@ -2,6 +2,6 @@
 session_start();
 unset($_SESSION["username"]);
 
-header("location: ../View/homepage.php");
+header("location: ../View/login.php");
 
 ?>

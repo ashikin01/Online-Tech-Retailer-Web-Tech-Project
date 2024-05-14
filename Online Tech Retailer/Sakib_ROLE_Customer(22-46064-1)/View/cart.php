@@ -23,17 +23,17 @@ if ((isset($_SESSION["purchase_msg"])) || (isset($_SESSION["err_login"])) || (is
 //     $phone = $row["Phone"];
 // }
 
-if (isset($_SESSION["cart"])) {
-    foreach ($_SESSION["cart"] as $key => $value) {
-        $sql = $conn->prepare("select * from product_datas where name=?");
-        $sql->bind_param("s", $value["item_name"]);
-        $sql->execute();
-        $result = $sql->get_result();
-        while ($row = mysqli_fetch_assoc($result)) {
-            $quantityX = $row["quantity"];
-        }
-    }
-}
+// if (isset($_SESSION["cart"])) {
+//     foreach ($_SESSION["cart"] as $key => $value) {
+//         $sql = $conn->prepare("select * from product_datas where name=?");
+//         $sql->bind_param("s", $value["item_name"]);
+//         $sql->execute();
+//         $result = $sql->get_result();
+//         while ($row = mysqli_fetch_assoc($result)) {
+//             $quantityX = $row["quantity"];
+//         }
+//     }
+// }
 
 ?>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ if (isset($_SESSION["cart"])) {
 <body>
     <h1>Shopping Cart</h1>
 
-    <div class="container">
+    <div id="container">
         <table class="content-table">
             <thead>
                 <tr>
@@ -85,7 +85,7 @@ if (isset($_SESSION["cart"])) {
                         <td>$value[price] <input type='hidden' class='iPrice' value='$value[price]'></td>
                         <td>
                         <form action='../Controller/cart_action.php' method='post' novalidate>
-                           <input type='number' class='quantity iQuantity' name='modQuantity' onchange='this.form.submit() 'value='$value[quantity]' min='1' max='$quantityX'>
+                           <input type='number' class='quantity iQuantity' name='modQuantity' onchange='this.form.submit()' value='$value[quantity]' min='1' max='$quantityX'>
                            <input type='hidden' name='item_name' value='$value[item_name]'>
                         </form>
                         </td>
@@ -114,11 +114,7 @@ if (isset($_SESSION["cart"])) {
             <p class="total-price">Shipping Cost:</p>
             <p class="price-value">Free</p>
 
-            <!-- <?php if (isset($_SESSION["username"])) ?> -->
             <form action="../Controller/checkout_action.php" method="" novalidate>
-                <!-- <?php if (isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0) {
-                        } ?> -->
-
                 <div class="btn-container">
                     <button name="purchase" class="btn-checkout">Checkout</button><br><br>
 
@@ -130,6 +126,18 @@ if (isset($_SESSION["cart"])) {
         </div>
     </div>
     <script src="js/cart.js"></script>
+
+    <!-- <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("demo").innerHTML =
+                    this.responseText;
+            }
+            xhttp.open("GET", "cart.php");
+            xhttp.send();
+        }
+    </script> -->
 
 </body>
 

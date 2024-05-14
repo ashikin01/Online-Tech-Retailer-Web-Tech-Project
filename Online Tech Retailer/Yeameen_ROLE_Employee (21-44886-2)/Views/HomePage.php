@@ -8,6 +8,7 @@ include("../Model/ECon.php");
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel="stylesheet" type="text/css" href="HomePaage.css">
     <title>Home Page</title>
 </head>
@@ -16,9 +17,7 @@ include("../Model/ECon.php");
 
     <!-- Profile link with profile logo -->
     <div class="profile-container">
-        <a href="http://localhost/sublimeText/new/Controller/ProfileActionPage.php">
-            <img src="path_to_your_profile_logo_image" alt="Profile" class="profile-logo">
-        </a>
+        <a href="http://localhost/sublimeText/new/Controller/ProfileActionPage.php">Profile<i class='bx bx-user-circle'></i></a>
     </div>
 
     <div class="button-container">
@@ -36,9 +35,7 @@ include("../Model/ECon.php");
         </a>
     </div>
 
-    <a href="http://localhost/sublimeText/new/Controller/EmployeeDisplay_Page.php">
-        <input type="submit" value="<=Back to Display">
-    </a>
+    
 
     <script>
         function myFunction() {

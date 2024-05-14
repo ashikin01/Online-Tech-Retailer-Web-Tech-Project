@@ -44,7 +44,7 @@
 <body>
 
   <div class="alert">
-    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
     <p><?php if (isset($_SESSION["change_msg"])) {
           echo $_SESSION["change_msg"];
         } else if (isset($_SESSION["forgot_msg"])) {

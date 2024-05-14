@@ -1,28 +1,38 @@
 <?php
 session_start();
 
-// Include your database connection file
+
 include("../Model/ECon.php");
 
-// Check if the user is logged in
-if (!isset($_SESSION['Username'])) {
-    // Redirect to login page or handle unauthorized access
 
+if (!isset($_SESSION['Username'])) {
+    header("Location: http://localhost/sublimeText/new/Views/Login_Layout.php");
+    exit();
 }
 
-// Retrieve user's salary information from the database
-$user_id = $_SESSION['EId']; // Assuming you have EId as the session variable
-$sql = "SELECT Salary FROM employee_dash WHERE Eid = $user_id"; // Corrected column name to Eid
-$result = $conn->query($sql);
+
+$email = $_SESSION['Username'];
+$sql = "SELECT Salary FROM employee_dash WHERE Email =?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result === false) {
+    echo "Error: " . $conn->error;
+    exit();
+}
 
 if ($result->num_rows > 0) {
-    // Fetch data and store it in variables
     $row = $result->fetch_assoc();
     $currentSalary = $row['Salary'];
 } else {
     // Handle case where no data is found
     $currentSalary = "N/A";
 }
+
+$stmt->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -40,4 +50,20 @@ if ($result->num_rows > 0) {
 
     <div>
         <h2>Salary Information</h2>
-        <p>Current Salary: <?php echo $currentSalary; ?> TK</
+        <p>Current Salary: <?php echo $currentSalary; ?> TK</p>
+    </div>
+
+    <div>
+        <form method="post">
+            <input type="submit" name="refresh" value="Refresh">
+        </form>
+    </div>
+    <a href="http://localhost/sublimeText/new/Views/HomePage.php"><input type="submit" value="<=Back to Home"></a>
+
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

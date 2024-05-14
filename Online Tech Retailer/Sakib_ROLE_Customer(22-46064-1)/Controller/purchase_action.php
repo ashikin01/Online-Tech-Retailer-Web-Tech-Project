@@ -81,22 +81,21 @@ if ($has_error == false) {
             $price = $value["price"];
             $quantity = $value["quantity"];
             // $total_price = $price * $quantity;
-            $total_price=0;
+            $total_price = 0;
             $sql->bind_param("issiiis", $order_id, $name, $item_name, $price, $quantity, $total_price, $pay_method);
-
-            if ($sql->execute()) {
+            $sql->execute();
+        }
+        foreach ($_SESSION["cart"] as $key => $value) {
+            $item_name = $value["item_name"];
+            $quantity = $value["quantity"];
             $sql = $conn->prepare("update customer_order set total_price = unit_price * quantity where item_name=?");
             $sql->bind_param("s", $item_name);
-                // $sql->execute();
-                if ($sql->execute()) {
-                    $sql = $conn->prepare("update product_datas set quantity = quantity - ? where name=?");
-                    $sql->bind_param("is", $quantity, $item_name);
-                    $sql->execute();
-                }
-            }
 
-            
-            // $sql = $conn->prepare("update product_datas set quantity = quantity - ?, total_price = price * (quantity - ?) where name=?");
+            if ($sql->execute()) {
+                $sql = $conn->prepare("update product_datas set quantity = quantity - ? where name=?");
+                $sql->bind_param("is", $quantity, $item_name);
+                $sql->execute();
+            }
         }
     }
     $_SESSION["purchase_msg"] = "Order Successful!";

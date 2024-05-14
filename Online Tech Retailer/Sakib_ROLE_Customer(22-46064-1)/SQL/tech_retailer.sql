@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2024 at 06:38 PM
+-- Generation Time: May 14, 2024 at 07:32 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -106,7 +106,7 @@ INSERT INTO `customer_order` (`Order_Id`, `Customer_Name`, `Item_Name`, `Unit_Pr
 (44, 'rakib', 'Asus ROG Zephyrus G16', 1000, 1, 0, 'Cash on delivery'),
 (45, 'rakib', 'Microsoft Surface 4', 200000, 1, 0, 'None'),
 (46, 'abid', 'MSI MPG 321URX 31.5', 140000, 1, 0, 'Bkash'),
-(47, 'sakib', 'Samsung S24 Ultra', 131950, 1, 0, 'Cash on delivery'),
+(47, 'sakib', 'Samsung S24 Ultra', 131950, 1, 131950, 'Cash on delivery'),
 (48, 'sakib', '18W PD USB C Wall Charger', 600, 9, 5400, 'Visa card'),
 (50, 'arif', 'Baseus Power Bank ', 1960, 4, 7840, 'Visa card'),
 (51, 'arif', 'Baseus Power Bank ', 1960, 4, 7840, 'Visa card'),
@@ -124,12 +124,18 @@ INSERT INTO `customer_order` (`Order_Id`, `Customer_Name`, `Item_Name`, `Unit_Pr
 (63, 'samiur', '18W PD USB C Wall Charger', 600, 4, 2400, 'Visa card'),
 (64, 'samiur', '18W PD USB C Wall Charger', 600, 4, 2400, 'Visa card'),
 (65, 'samiur', 'Baseus Power Bank ', 1960, 3, 5880, 'Cash on delivery'),
-(68, 'abid', 'Iphone 14 Max', 126000, 1, 0, 'Nagad'),
+(68, 'abid', 'Iphone 14 Max', 126000, 1, 126000, 'Nagad'),
 (69, 'abid', 'Iphone 14 Max', 126000, 1, 126000, 'Cash on delivery'),
 (70, 'rakib', 'Iphone 14 Max', 126000, 2, 252000, 'Visa card'),
 (71, 'abid', '18W PD USB C Wall Charger', 600, 3, 1800, 'Cash on delivery'),
 (72, 'abid', '18W PD USB C Wall Charger', 600, 3, 1800, 'Cash on delivery'),
-(73, 'abid', '18W PD USB C Wall Charger', 600, 3, 1800, 'Cash on delivery');
+(73, 'abid', '18W PD USB C Wall Charger', 600, 3, 1800, 'Cash on delivery'),
+(74, 'rakib', 'Iphone 14 Max', 126000, 2, 252000, 'Nagad'),
+(75, 'sakib', '18W PD USB C Wall Charger', 600, 13, 7800, 'Cash on delivery'),
+(78, 'Imtiaz', 'iFanze Smart Watch', 3750, 3, 11250, 'Master card'),
+(78, 'Imtiaz', 'Samsung S24 Ultra', 131950, 2, 263900, 'Master card'),
+(79, 'arif', 'Iphone 14 Max', 126000, 2, 252000, 'Bkash'),
+(79, 'arif', 'iFanze Smart Watch', 3750, 3, 11250, 'Bkash');
 
 -- --------------------------------------------------------
 
@@ -182,9 +188,23 @@ INSERT INTO `customer_report` (`Order_Id`, `Username`, `Report_Message`) VALUES
 
 CREATE TABLE `faq` (
   `id` int(11) NOT NULL,
-  `question` varchar(100) NOT NULL,
-  `answer` varchar(100) NOT NULL
+  `question` varchar(500) NOT NULL,
+  `answer` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `faq`
+--
+
+INSERT INTO `faq` (`id`, `question`, `answer`) VALUES
+(1, 'How do I place an order?', 'Simply browse our website, add the desired items to your cart, and follow the checkout process. You\'ll be prompted to create an account (optional) and enter your shipping and payment information.'),
+(2, 'What payment methods do you accept?', 'We accept all major credit cards, debit cards, and some digital wallets (see website for details).'),
+(3, 'Is my payment information secure?', 'Absolutely! We use industry-standard security measures to protect your payment information.'),
+(4, 'How long will it take to receive my order?', 'Delivery times vary depending on your location and chosen shipping method. You\'ll see estimated delivery times during checkout.'),
+(5, 'What is your return policy?', 'We offer a 10 days money-back guarantee on most products.'),
+(6, 'What happens if I receive a damaged item?', 'Please contact us immediately if you receive a damaged item. We\'ll be happy to arrange a replacement or refund.'),
+(7, 'What are the benefits of having an account?', 'With an account, you can enjoy faster checkout, track your orders, manage your account information, and view past purchases.'),
+(8, 'How do I contact customer service?', 'You can contact customer service by phone, email.');
 
 -- --------------------------------------------------------
 
@@ -204,7 +224,6 @@ CREATE TABLE `order_manager` (
 --
 
 INSERT INTO `order_manager` (`Order_Id`, `Name`, `Phone`, `Address`) VALUES
-(18, 'sakib', '01866188084', 'Chittagong'),
 (19, 'sakib', '01866188084', 'Dhaka'),
 (20, 'rakib', '01734567892', 'Dhaka'),
 (21, 'sakib', '01866188084', 'Chittagong'),
@@ -259,7 +278,13 @@ INSERT INTO `order_manager` (`Order_Id`, `Name`, `Phone`, `Address`) VALUES
 (70, 'rakib', '01734567892', 'Bashundhara R\\A'),
 (71, 'abid', '01734567845', 'Muradpur'),
 (72, 'abid', '01734567845', 'Muradpur'),
-(73, 'abid', '01734567845', 'Muradpur');
+(73, 'abid', '01734567845', 'Muradpur'),
+(74, 'rakib', '01734567892', 'Bashundhara R/A'),
+(75, 'sakib', '01866188084', 'Muradpur'),
+(76, 'Imtiaz', '01866188088', 'Chittagong'),
+(77, 'Imtiaz', '01866188088', 'Bashundhara R/A'),
+(78, 'Imtiaz', '01866188088', 'Dhaka'),
+(79, 'arif', '01456677455', 'Bashundhara R/A');
 
 -- --------------------------------------------------------
 
@@ -284,14 +309,14 @@ CREATE TABLE `product_datas` (
 --
 
 INSERT INTO `product_datas` (`id`, `category`, `name`, `price`, `quantity`, `discount`, `price_after_discount`, `delivery_charge`, `picture`) VALUES
-(35, 'Phone', 'Iphone 14 Max', '140000', '44', '10', 126000, '150', 'assets/1.png'),
-(36, 'Phone', 'Samsung S24 Ultra', '145000', '53', '9', 131950, '200', 'assets/2.png'),
-(37, 'Tab', 'Xiaomi Pad 6', '40000', '0', '5', 38000, '100', 'assets/1.png'),
-(38, 'Laptop', 'Dell XPS 15', '150000', '20', '0', 150000, '600', 'assets/2.png'),
-(39, 'Laptop', 'Macbook Air M1', '90000', '0', '35', 58500, '400', 'assets/1.png'),
-(40, 'Power Bank', 'Baseus Power Bank ', '2000', '91', '2', 1960, '30', 'assets/2.png'),
-(41, 'Charger', '18W PD USB C Wall Charger', '600', '97', '0', 600, '40', 'assets/1.png'),
-(42, 'Smart Watch', 'iFanze Smart Watch', '5000', '14', '25', 3750, '70', 'assets/2.png');
+(35, 'Laptop', 'Macbook Air M1 Pro', '240000', '40', '10', 220000, '150', 'assets/1.png'),
+(36, 'Laptop', 'Lenovo Legion Pro 7', '145000', '49', '9', 126000, '200', 'assets/2.png'),
+(37, 'Desktop', 'ASUS ROG Swift', '140000', '0', '5', 125000, '100', 'assets/3.png'),
+(38, 'Desktop', 'MSI MPG 321URX 31.5', '150000', '20', '0', 150000, '600', 'assets/4.png'),
+(39, 'Desktop', 'LG 27GR95QE-B 27-Inch', '90000', '0', '35', 75000, '400', 'assets/5.png'),
+(40, 'Processor', 'AMD Ryzen 9 7950X3D', '350000', '88', '2', 345000, '30', 'assets/6.png'),
+(41, 'Processor', 'Ryzen 675X45F', '200000', '73', '0', 180000, '40', 'assets/7.png'),
+(42, 'Printer', 'Epson EcoTank Printer', '20000', '20', '25', 19500, '70', 'assets/8.png');
 
 --
 -- Indexes for dumped tables
@@ -350,13 +375,13 @@ ALTER TABLE `customer_question`
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `order_manager`
 --
 ALTER TABLE `order_manager`
-  MODIFY `Order_Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `Order_Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `product_datas`

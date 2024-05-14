@@ -17,7 +17,6 @@ if (isset($_SESSION["cart"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Retailer</title>
-    <!-- <script type="text/javascript"></script> -->
     <link rel="stylesheet" href="Style3.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/8372dfe193.js" crossorigin="anonymous"></script>
@@ -26,14 +25,14 @@ if (isset($_SESSION["cart"])) {
 
 <body>
     <section class="container">
-        <header>
+        <!-- <header> -->
             <div class="header-container">
                 <nav>
                     <h1 class="retailer">Tech Retailer</h1>
                     <div class="menu">
                         <a href="homepage.php" class="button-value">Home</a>
-                        <a href="product.php" class="button-value">Product</a>
-                        <a href="registration.php" class="button-value">About</a>
+                        <a href="product.php" class="button-value">Shop</a>
+                        <a href="about.php" class="button-value">About</a>
                         <a href="faq.php" class="button-value">FAQ</a>
                     </div>
 
@@ -56,7 +55,7 @@ if (isset($_SESSION["cart"])) {
                     </div>
                 </nav>
             </div>
-        </header>
+        <!-- </header> -->
     </section>
     <!-- <section class="container">
         <div class="home-product">

@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     //     $_SESSION["err_username"]=$err_username;
     //     $has_error=true;
     // }
-    else (setcookie("username", $username, time() + 60, "/"));
+    else (setcookie("username", $username, time() + 180, "/"));
     $has_error = false;
 
     $fullName = sanitize($_POST["fullName"]);
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $err_fullName = "Only letters and white space allowed";
         $_SESSION["err_fullName"] = $err_fullName;
         $has_error = true;
-    } else (setcookie("fullName", $fullName, time() + 60, "/"));
+    } else (setcookie("fullName", $fullName, time() + 180, "/"));
     $has_error = false;
 
     $email = sanitize($_POST["email"]);
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $err_email = "Invalid email format";
         $_SESSION["err_email"] = $err_email;
         $has_error = true;
-    } else (setcookie("email", $email, time() + 60, "/"));
+    } else (setcookie("email", $email, time() + 180, "/"));
     $has_error = false;
 
     $phone = sanitize($_POST["phone"]);
@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $err_phone = "Invalid phone number format (e.g. 01866188084)";
         $_SESSION["err_phone"] = $err_phone;
         $has_error = true;
-    } else (setcookie("phone", $phone, time() + 60, "/"));
+    } else (setcookie("phone", $phone, time() + 180, "/"));
     $has_error = false;
 
     $password = sanitize($_POST["password"]);

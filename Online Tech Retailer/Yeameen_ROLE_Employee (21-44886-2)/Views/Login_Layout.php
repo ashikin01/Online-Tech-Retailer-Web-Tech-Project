@@ -1,15 +1,9 @@
-<?php 
-
-session_start();
- ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="LoginStyle.css">
 	<title>Login By Employee</title>
 	<script type="text.javascript" src=js/login.js></script>
 </head>
@@ -30,7 +24,7 @@ session_start();
 	 <input type="submit" name="login" value="Login" class="btn">
 	 </br>
 
-      <div class = "signup">New Member? <a href="http://localhost/sublimeText/new/Views/RegistrationForm.php" class="link">SignUp Here</a></div>
+      <div class = "signup">New Member? <a href="http://localhost/sublimeText/new/Views/SignUpForm.php" class="link">SignUp Here</a></div>
    </div>
 </div>
 
@@ -48,35 +42,30 @@ session_start();
 </body>
 </html>
 
-<?php 
+<?php
+session_start();
 
-include("../Model/DataCon.php");
-
+include("../Model/ECon.php");
 
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $pwd = $_POST['password'];
 
-
     $query = "SELECT * FROM employee_dash WHERE Email = ? AND Password = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("ss", $username, $pwd);
-
-
     $stmt->execute();
-
-
     $stmt->store_result();
 
     if ($stmt->num_rows == 1) {
-        $_SESSION['User_Name'] = $username;
-      header('Location: ../Views/HomePage.php');
+        $_SESSION['User_Name'] = $username; 
+        header('Location: ../Views/HomePage.php');
+        exit();
     } else {
         echo "Login Failed";
     }
 
-    // Close statement
+    
     $stmt->close();
 }
-
 ?>

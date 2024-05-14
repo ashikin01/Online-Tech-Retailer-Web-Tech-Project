@@ -3,10 +3,6 @@
 include("top_section.php");
 include("../Model/db_config.php");
 include("header.php");
-// include("header.php");
-// if (isset($_SESSION["username"])) {
-//     include("question_button.php");
-// }
 
 if (isset($_SESSION["err_item"])) {
     include("alert_box2.php");
@@ -43,8 +39,6 @@ if (isset($_POST['sort_product'])) {
         </div>
     </form>
 
-    <!-- <section class="product" id="product"> -->
-    <!-- <h2 class="heading">Products</h2> -->
     <?php if ($sort_by == "Default") { ?>
         <div class="box-container" id="box-container">
             <?php

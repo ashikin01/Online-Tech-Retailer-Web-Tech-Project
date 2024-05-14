@@ -2,23 +2,14 @@
 session_start();
 include("../Model/ECon.php");
 
-// Sample data for present and absent days (replace with actual data from database)
-$presentDays = 23;
-$absentDays = 7;
 
-// Update present and absent days based on admin's actions
-if (isset($_POST['refresh'])) {
-    // Perform update operations here (e.g., fetch data from database)
-    // For demonstration purposes, we'll just increment present and absent days by 1
-    $presentDays++;
-    $absentDays--;
+$query="SELECT Eid from employee_dash ed, employee_attendance eda WHERE ed.Eid=eda.EID";
+$result = mysqli_query ($conn,$query);
+while ($row = mysqli_fetch_assoc($result))
+{
+    
 }
 
-// Increment present days count when "Give Attendance to Admin" button is clicked
-if (isset($_POST['give_attendance'])) {
-    // Perform update operations here (e.g., increment present days count)
-    $presentDays++;
-}
 ?>
 
 <!DOCTYPE html>

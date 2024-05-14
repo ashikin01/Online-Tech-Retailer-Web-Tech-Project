@@ -39,8 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     //     $_SESSION["err_username"]=$err_username;
     //     $has_error=true;
     // }
-    // else (setcookie("username", $username, time() + 60, "/"));
-    // $has_error = false;
 
     $fullName = sanitize($_POST["fullName"]);
 
@@ -55,8 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     //     $_SESSION["err_fullName"] = $err_fullName;
     //     $has_error = true;
     // } 
-    // else (setcookie("fullName", $fullName, time() + 60, "/"));
-    // $has_error = false;
 
     $email = sanitize($_POST["email"]);
 
@@ -64,13 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $err_email = "Email required";
         $_SESSION["err_email"] = $err_email;
         $has_error = true;
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } 
+    else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $err_email = "Invalid email format";
         $_SESSION["err_email"] = $err_email;
         $has_error = true;
     }
-    // else (setcookie("email", $email, time() + 60, "/"));
-    // $has_error = false;
 
     $phone = sanitize($_POST["phone"]);
 
@@ -78,35 +73,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $err_phone = "Phone number required";
         $_SESSION["err_phone"] = $err_phone;
         $has_error = true;
-    } else if (!preg_match("/^01[0-9]{9}$/", $phone)) {
+    } 
+    else if (!preg_match("/^01[0-9]{9}$/", $phone)) {
         $err_phone = "Invalid phone number format";
         $_SESSION["err_phone"] = $err_phone;
         $has_error = true;
-    }
-    // else (setcookie("phone", $phone, time() + 60, "/"));
-    // $has_error = false;
-} else {
+    } 
+    
+}
+else{
     $has_error = false;
 }
 
 if ($has_error == false) {
-    $id = $_POST["id"];
+    $id=$_POST["id"];
     $sql = $conn->prepare("update customer set username=?, full_name=?, email=?, phone=? where id=?");
     $sql->bind_param("ssssi", $username, $fullName, $email, $phone, $id);
-    $result = $sql->execute();
+    $sql->execute();
 
-    $result = $sql->get_result();
-
-    if (mysqli_num_rows($result) > 0) {
-        $_SESSION["update_msg"] = "Profile successfully updated!";
-        header("location: ../View/profile.php");
-    }
-    else{
-        $err_email= "Duplicate email";
-        $_SESSION['err_email']=$err_email;
-        header('location: ../View/profile.php');
-    }
-
+    $_SESSION["update_msg"] = "Profile successfully updated!";
+    header("location: ../View/profile.php");
 
     // if ($has_db_error == true) {
     //     $db_error_message = $conn->connect_error;
@@ -115,6 +101,7 @@ if ($has_error == false) {
     // } else {
     //     header("location: ../View/profile.php");
     // }
-} else {
+} 
+else {
     header("location: ../View/profile.php");
 }

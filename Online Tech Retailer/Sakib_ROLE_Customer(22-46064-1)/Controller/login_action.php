@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     //     $_SESSION["err_username"]=$err_username;
     //     $has_error=true;
     // }
-    else(setcookie("username",$username,time()+ 60,"/"));
+    else(setcookie("username",$username,time()+ 84000,"/"));
     $has_error=false;
 
     $password=sanitize($_POST["password"]);

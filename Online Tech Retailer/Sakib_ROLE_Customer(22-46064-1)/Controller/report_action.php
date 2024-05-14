@@ -67,7 +67,7 @@ if ($has_error == false) {
 
         $_SESSION["report_msg"] = "Report sent!";
         header("location: ../View/report.php");
-    } 
+    }
     else {
         $err_order_id = "Order id doesn't match for the username";
         $_SESSION["err_order_id"] = $err_order_id;

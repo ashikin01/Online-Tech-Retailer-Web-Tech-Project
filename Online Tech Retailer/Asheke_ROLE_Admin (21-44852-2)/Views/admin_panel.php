@@ -5,7 +5,7 @@ if(!isset($_SESSION['username'])){
     header("location: login.php");
 }
 else{
-   include "header_after_login.php";
+   include "header_after_login_admin_panel.php";
 }
 
 ?>

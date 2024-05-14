@@ -18,6 +18,7 @@
             background-size: cover;
             padding-top: 6rem;
             padding-bottom: 6rem;
+            /* box-shadow: 0 0 20px rgb(55 55 55 / 15%); */
         }
 
         p{
@@ -25,7 +26,8 @@
             font-size: 26px;
             font-weight: bold;
             /* color: oldlace; */
-            color: #bee7de;
+            /* color: #bee7de; */
+            color: #cafff4;
             margin-top: 250px;
         }
         .btn-shop-container{
@@ -55,7 +57,7 @@
 
         .btn-shop:hover {
             opacity: 0.2;
-            color: #121212;
+            color: #cafff4;
         }
     </style>
 </head>

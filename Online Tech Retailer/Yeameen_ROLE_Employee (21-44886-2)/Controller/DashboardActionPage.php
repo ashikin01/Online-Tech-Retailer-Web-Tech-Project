@@ -2,11 +2,20 @@
 session_start();
 include("../Model/ECon.php");
 
-// Assuming you have already established a database connection in ECon.php
 
-// Fetching tasks
-$taskSql = "SELECT Task FROM employee_dash"; 
+if (!isset($_SESSION['User_Name'])) {
+ 
+    header("Location: http://localhost/sublimeText/new/Views/Login_Layout.php");
+    exit();
+}
+
+
+$email = $_SESSION['User_Name'];
+
+
+$taskSql = "SELECT Task FROM employee_dash WHERE Email = ?";
 $taskStmt = mysqli_prepare($conn, $taskSql);
+mysqli_stmt_bind_param($taskStmt, "s", $email);
 mysqli_stmt_execute($taskStmt);
 mysqli_stmt_bind_result($taskStmt, $task);
 $tasks = array();
@@ -15,9 +24,10 @@ while (mysqli_stmt_fetch($taskStmt)) {
 }
 mysqli_stmt_close($taskStmt);
 
-// Fetching performance data
-$performanceSql = "SELECT Performance FROM employee_dash"; 
+
+$performanceSql = "SELECT Performance FROM employee_dash WHERE Email = ?";
 $performanceStmt = mysqli_prepare($conn, $performanceSql);
+mysqli_stmt_bind_param($performanceStmt, "s", $email);
 mysqli_stmt_execute($performanceStmt);
 mysqli_stmt_bind_result($performanceStmt, $performance);
 $performances = array();
@@ -26,9 +36,10 @@ while (mysqli_stmt_fetch($performanceStmt)) {
 }
 mysqli_stmt_close($performanceStmt);
 
-// Fetching announcement data
-$announcementSql = "SELECT Announcement FROM employee_dash"; 
+
+$announcementSql = "SELECT Announcement FROM employee_dash WHERE Email = ?";
 $announcementStmt = mysqli_prepare($conn, $announcementSql);
+mysqli_stmt_bind_param($announcementStmt, "s", $email);
 mysqli_stmt_execute($announcementStmt);
 mysqli_stmt_bind_result($announcementStmt, $announcement);
 $announcements = array();
@@ -37,9 +48,19 @@ while (mysqli_stmt_fetch($announcementStmt)) {
 }
 mysqli_stmt_close($announcementStmt);
 
+$notificationSql = "SELECT Task FROM employee_dash WHERE Email = ?";
+$notificationStmt = mysqli_prepare($conn, $notificationSql);
+mysqli_stmt_bind_param($notificationStmt, "s", $email);
+mysqli_stmt_execute($notificationStmt);
+mysqli_stmt_bind_result($notificationStmt, $notification);
+$notifications = array();
+while (mysqli_stmt_fetch($notificationStmt)) {
+    $notifications[] = $notification;
+}
+mysqli_stmt_close($notificationStmt);
+
 mysqli_close($conn);
 
-// Notification message based on tasks fetched
 $notificationMessage = !empty($tasks) ? "Task is added" : "0 Notification";
 ?>
 
@@ -62,9 +83,8 @@ $notificationMessage = !empty($tasks) ? "Task is added" : "0 Notification";
     </div>
 
     <div id="taskDiv" style="display: none;">
-        <!-- Content for Task -->
+       
         <?php
-        // Output fetched tasks
         if (!empty($tasks)) {
             echo "<ul>";
             foreach ($tasks as $task) {
@@ -78,14 +98,13 @@ $notificationMessage = !empty($tasks) ? "Task is added" : "0 Notification";
     </div>
 
     <div id="notificationDiv" style="display: none;">
-        <!-- Content for Notification -->
+     
         <p><?php echo $notificationMessage; ?></p>
     </div>
 
     <div id="performanceDiv" style="display: none;">
-        <!-- Content for Performance -->
+      
         <?php
-        // Output fetched performance data
         if (!empty($performances)) {
             echo "<ul>";
             foreach ($performances as $performance) {
@@ -99,9 +118,8 @@ $notificationMessage = !empty($tasks) ? "Task is added" : "0 Notification";
     </div>
 
     <div id="announcementDiv" style="display: none;">
-        <!-- Content for Announcement -->
+     
         <?php
-        // Output fetched announcement data
         if (!empty($announcements)) {
             echo "<ul>";
             foreach ($announcements as $announcement) {

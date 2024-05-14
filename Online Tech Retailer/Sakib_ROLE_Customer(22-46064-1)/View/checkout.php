@@ -40,60 +40,57 @@ foreach ($result as $row) {
                 <th>Customer Deatails</th>
             </table>
 
-            <!-- <?php if (isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0) { ?> -->
-                <div class="cus-info">
-                    <Label>Name</Label><br>
-                    <input type="text" name="name" placeholder="Name" value="<?php if (isset($username)) {
-                                                                                    echo $username;
-                                                                                }; ?>" readonly>
-                </div>
+            <div class="cus-info">
+                <Label>Name</Label><br>
+                <input type="text" name="name" placeholder="Name" value="<?php if (isset($username)) {
+                                                                                echo $username;
+                                                                            }; ?>" readonly>
+            </div>
 
-                <div class="error-msg">
+            <div class="error-msg">
                 <span id="err_username">
-                <?php
-                if (isset($_SESSION["err_username"])) {
-                    echo $_SESSION["err_username"];
-                 }
-                 unset($_SESSION["err_username"]);
-                 ?>
+                    <?php
+                    if (isset($_SESSION["err_username"])) {
+                        echo $_SESSION["err_username"];
+                    }
+                    unset($_SESSION["err_username"]);
+                    ?>
                 </span>
             </div>
 
-                <div class="cus-info">
-                    <Label>Phone</Label><br>
-                    <input type="text" name="phone" placeholder="Phone" value="<?php if (isset($phone)) {
-                                                                                    echo $phone;
-                                                                                }; ?>" readonly>
-                </div>
+            <div class="cus-info">
+                <Label>Phone</Label><br>
+                <input type="text" name="phone" placeholder="Phone" value="<?php if (isset($phone)) {
+                                                                                echo $phone;
+                                                                            }; ?>">
+            </div>
 
-                <div class="error-msg">
+            <div class="error-msg">
                 <span id="err_phone">
-                <?php
-                if (isset($_SESSION["err_phone"])) {
-                    echo $_SESSION["err_phone"];
-                 }
-                 unset($_SESSION["err_phone"]);
-                 ?>
+                    <?php
+                    if (isset($_SESSION["err_phone"])) {
+                        echo $_SESSION["err_phone"];
+                    }
+                    unset($_SESSION["err_phone"]);
+                    ?>
                 </span>
             </div>
 
-                <div class="cus-info">
-                    <Label>Address</Label><br>
-                    <input type="text" name="address" placeholder="Address">
-                </div>
+            <div class="cus-info">
+                <Label>Address</Label><br>
+                <input type="text" name="address" placeholder="Address">
+            </div>
 
-                <div class="error-msg">
+            <div class="error-msg">
                 <span id="err_address">
-                <?php
-                if (isset($_SESSION["err_address"])) {
-                    echo $_SESSION["err_address"];
-                 }
-                 unset($_SESSION["err_address"]);
-                 ?>
+                    <?php
+                    if (isset($_SESSION["err_address"])) {
+                        echo $_SESSION["err_address"];
+                    }
+                    unset($_SESSION["err_address"]);
+                    ?>
                 </span>
             </div>
-
-            <!-- <?php } ?> -->
         </div>
 
         <div class="payment-container">

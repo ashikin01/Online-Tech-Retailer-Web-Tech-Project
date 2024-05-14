@@ -2,7 +2,7 @@
 include("../Model/DataCon.php");
 
 if(isset($_POST['Register'])) {
-    // Extracting form data
+    
     $fname = $_POST['fname'];
     $lastname = $_POST['lastname'];
     $pwd = $_POST['password'];
@@ -12,21 +12,21 @@ if(isset($_POST['Register'])) {
     $phone = $_POST['phone'];
     $address = $_POST['address'];
 
-    // Prepare the SQL statement
+    
     $stmt = $conn->prepare("INSERT INTO EMPFORM (Fname,Lname, Password, ConPass, gender, emaill, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?,?)");
 
 
-    // Bind parameters
+    
     $stmt->bind_param("ssssssss", $fname, $lastname, $pwd, $cpwd, $gender, $email, $phone, $address);
 
-    // Execute the statement
+   
     if($stmt->execute()) {
         echo "Data Inserted Successfully";
     } else {
         echo "Failed to Insert";
     }
 
-    // Close the statement
+   
     $stmt->close();
 }
 ?>

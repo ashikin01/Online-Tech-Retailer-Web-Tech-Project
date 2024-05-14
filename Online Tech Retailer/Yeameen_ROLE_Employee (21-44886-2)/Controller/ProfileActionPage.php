@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../Model/DataCon.php");
+include("../Model/ECon.php");
 
 ?>
 
@@ -28,18 +28,34 @@ include("../Model/DataCon.php");
         .link:hover {
             text-decoration: underline;
         }
+        .back-button {
+            margin-top: 20px;
+        }
+        .back-button input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        .back-button input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome, <?php echo $_SESSION['User_Name']; ?></h1>
-        <a href="#" class="link">Notification</a>
-        <a href="#" class="link">Rank</a>
-        <a href="#" class="link">Profile Details</a>
+        <a href="http://localhost/sublimeText/new/Views/NotificationView.php" class="link">Notification</a>
+        <a href="http://localhost/sublimeText/new/Views/RankView.php" class="link">Rank</a>
+        <a href="http://localhost/sublimeText/new/Views/ProfileDetailsView.php" class="link">Profile Details</a>
         <a href="http://localhost/sublimeText/new/Views/Login_Layout.php" class="link">Log Out</a>
-       
-         <a href="http://localhost/sublimeText/new/Views/HomePage.php"><input type="submit" value="<=Back to Home"></a>
-
+        <div class="back-button">
+            <a href="http://localhost/sublimeText/new/Views/HomePage.php"><input type="submit" value="<= Back to Home"></a>
+        </div>
     </div>
 
     <script>

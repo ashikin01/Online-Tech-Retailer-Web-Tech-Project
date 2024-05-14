@@ -16,6 +16,7 @@ $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : '';
     <meta charset="UTF-8">
     <title>Tech Retailer</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="js/login.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -33,7 +34,7 @@ $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : '';
             </div>
 
             <div class="error-msg">
-                <span class="err_username">
+                <span id="err_username">
                     <?php
                     if (isset($_SESSION["err_username"])) {
                         echo $_SESSION["err_username"];
@@ -50,7 +51,7 @@ $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : '';
             </div>
 
             <div class="error-msg">
-                <span class="err_password">
+                <span id="err_password">
                     <?php
                     if (isset($_SESSION["err_password"])) {
                         echo $_SESSION["err_password"];
@@ -80,7 +81,7 @@ $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : '';
 
         </form>
     </div>
-    <script src="js/login.js"></script>
+    
 </body>
 
 </html>

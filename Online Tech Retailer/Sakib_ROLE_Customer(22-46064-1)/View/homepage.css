@@ -140,8 +140,8 @@ h1 {
 }
 
 .box2 img {
-    width: auto;
-    height: auto;
+    width: 200px;
+    height: 200px;
     /* background: lightblue;
     background: radial-gradient(white 30%, lightblue 70%); */
     margin-top: -15px;

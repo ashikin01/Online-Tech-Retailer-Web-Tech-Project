@@ -6,7 +6,7 @@ $loginError = false;
 $cartError = false;
 $quantityError = false;
 
-if ((isset($_SESSION["cart"])) && (count($_SESSION["cart"])) < 1) {
+if ((isset($_SESSION["cart"])) && (count($_SESSION["cart"])) == 0) {
     $cartError = true;
 }
 

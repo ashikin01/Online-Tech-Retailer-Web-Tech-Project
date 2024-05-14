@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include("../Model/ECon.php");
+include("../Model/DataCon.php");
 
 if(isset($_SESSION['User_Name'])) {
     echo "Welcome ".$_SESSION['User_Name'] . "<br>"; 
@@ -26,7 +26,7 @@ if(isset($_POST['update_profile'])) {
     $confirm_password = $_POST['confirm_password'];
 
  
-    $query = "SELECT * FROM employee_dash WHERE Email = ? AND Password = ?";
+    $query = "SELECT * FROM empform WHERE emaill = ? AND Password = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("ss", $userprofile, $old_password);
     $stmt->execute();

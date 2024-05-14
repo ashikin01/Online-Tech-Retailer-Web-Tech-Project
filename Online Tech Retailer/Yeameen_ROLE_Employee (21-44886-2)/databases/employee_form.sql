@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2024 at 06:58 PM
+-- Generation Time: May 14, 2024 at 01:54 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -127,15 +127,23 @@ CREATE TABLE `employee_dash` (
   `Salary` varchar(15) NOT NULL,
   `Task` varchar(50) NOT NULL,
   `Performance` varchar(20) NOT NULL,
-  `Announcement` varchar(50) NOT NULL
+  `Announcement` varchar(100) NOT NULL,
+  `Experience` varchar(20) NOT NULL,
+  `Rating` int(6) NOT NULL,
+  `Phone` int(30) DEFAULT NULL,
+  `Address` varchar(50) NOT NULL,
+  `Gender` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee_dash`
 --
 
-INSERT INTO `employee_dash` (`Eid`, `Username`, `Password`, `Email`, `Salary`, `Task`, `Performance`, `Announcement`) VALUES
-(11, 'Mohammad Aziz', 'ma123', 'maziz101@gmail.com', '40000', 'Handle the Store shipment', '80%', 'There will be holiday tommorrow');
+INSERT INTO `employee_dash` (`Eid`, `Username`, `Password`, `Email`, `Salary`, `Task`, `Performance`, `Announcement`, `Experience`, `Rating`, `Phone`, `Address`, `Gender`) VALUES
+(0, 'Yeameen Aziz', 'ya123', 'yeameenaziz12@gmail.com', '', '', '', '', '', 0, 1316196029, 'Bashundhara, Block-A,Road-2,plot-89/90', 'male'),
+(11, 'Mohammad Aziz', 'ma123', 'maziz101@gmail.com', '40000', 'Handle the Store shipment', '80%', 'It is to notify all concerned that due to 25th December, Christmas all activities are closed.', 'Tier-2', 2800, 1021232321, 'Narshingdi', 'Male'),
+(12, 'pranto12@gmail.com', 'ph1234', 'pranto12@gmail.com', '50000', 'Go to shop', '90%', 'It is to notify all concerned that due to durga puja all activities are closed.', 'Tier-3', 2000, 1893239032, 'Chittagong', 'Male'),
+(20, 'Asifuzzaman', 'asif123', 'asif20@gmail.com', '70000', 'Manage the utilities', '82%', 'Tomorrow is Eid! Eid Mubarak Everyone..', 'Tier-1', 3200, 1823729, 'Dhaka', 'Male');
 
 -- --------------------------------------------------------
 
@@ -189,7 +197,8 @@ ALTER TABLE `employee_attendance`
 -- Indexes for table `employee_dash`
 --
 ALTER TABLE `employee_dash`
-  ADD PRIMARY KEY (`Eid`);
+  ADD PRIMARY KEY (`Eid`),
+  ADD UNIQUE KEY `Phone` (`Phone`);
 
 --
 -- Indexes for table `tasks`
